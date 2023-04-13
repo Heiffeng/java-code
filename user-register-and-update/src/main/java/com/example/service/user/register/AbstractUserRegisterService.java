@@ -11,7 +11,6 @@ import lombok.RequiredArgsConstructor;
  * Author: Heiffeng
  * Date: 2023/4/6
  */
-@RequiredArgsConstructor
 public abstract class AbstractUserRegisterService {
 
     private UserQueryService userQueryService;

@@ -4,6 +4,7 @@ import com.example.constant.RegisterType;
 import com.example.constant.UserType;
 import com.example.request.CreateUser;
 import com.example.response.CreateUserResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +17,10 @@ import java.util.stream.Collectors;
  * Date: 2023/4/6
  */
 @Service
+@RequiredArgsConstructor
 public class UserRegisterService {
 
-    @Autowired
-    private List<AbstractUserRegisterService> registerServiceList;
+    private final List<AbstractUserRegisterService> registerServiceList;
 
     // 根据UserType获取对应的注册策略
     public AbstractUserRegisterService getRegisterService(UserType userType) {
